@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/loop', 'HomeController@loop');
+Route::post('/save', 'ProductController@store');
+Route::get('/delete', 'ProductController@destory');
+Route::get('/update', 'ProductController@update');
+Route::get('/json', 'HomeController@json')->name('json');
